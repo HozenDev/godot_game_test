@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b41uwevdym7f8" path="res://scenes/kill_zone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://dp53skjqnqv6w" path="res://scenes/slime.tscn" id="6_p57ef"]
 [ext_resource type="FontFile" uid="uid://cigoji7gwvvwd" path="res://assets/fonts/PixelOperator8.ttf" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://bd8uvvjwbl352" path="res://scenes/in_game_ui.tscn" id="8_gee14"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("1_yqjtg")
@@ -409,17 +410,20 @@ tile_set = SubResource("TileSet_p57ef")
 position = Vector2(0, -9)
 zoom = Vector2(4, 4)
 limit_bottom = 135
-limit_smoothed = true
-position_smoothing_enabled = true
 
-[node name="Score" type="Label" parent="Player" unique_id=1546655352]
-offset_left = -138.0
-offset_top = -84.0
-offset_right = -87.0
-offset_bottom = -75.0
-theme_override_fonts/font = ExtResource("7_u5sy4")
-theme_override_font_sizes/font_size = 8
-text = "Score: 0"
+[node name="inGameUI" parent="Player/Camera2D" unique_id=41577098 instance=ExtResource("8_gee14")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -144.0
+offset_top = -81.0
+offset_right = 1008.0
+offset_bottom = 569.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(0.25, 0.25)
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="Coins" type="Node" parent="." unique_id=1934384755]
 
